@@ -1,0 +1,245 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", Tahoma, Geneva, Verdana, sans-serif;
+}
+body {
+  background-color: #023047;
+}
+
+body h1 {
+  color: #f87874;
+}
+
+body {
+  position: relative;
+}
+.customAbout {
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+  transition: all 0.2s ease;
+  filter: drop-shadow(2px 4px 6px #333);
+}
+.customAbout:hover {
+  color: #f87874;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card,
+.feedback-list,
+.feedbackStatBar {
+  width: 100%;
+  max-width: 700px;
+}
+.card {
+  padding: 1.5rem 1.8rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  color: #333;
+  margin-top: 1.2rem;
+  position: relative;
+}
+.card.reverse {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+}
+.numCircle {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  top: -0.8rem;
+  left: -0.8rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  font-weight: 500;
+  background-color: #f87874;
+  color: #fff;
+  padding: 0.5rem;
+}
+
+.card .close {
+  position: absolute;
+  border: none;
+  outline: none;
+  background: none;
+  top: 0.5rem;
+  right: 0.8rem;
+  cursor: pointer;
+}
+.noFeedback {
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+.feedback-list {
+  width: 90%;
+  margin: 0.5rem auto;
+}
+
+.card p {
+  font-weight: 500;
+}
+
+h1 {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+}
+
+.feedbackStatBar {
+  display: flex;
+  width: 90%;
+  justify-content: space-between;
+  margin-top: 0.5rem;
+  color: #fff;
+  font-weight: 500;
+}
+
+form h4 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+form input {
+  border: 1px solid #bfbfbf;
+  padding: 1.2rem;
+  padding-right: 23.5%;
+  height: 28px;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  width: 100%;
+  outline-color: #bfbfbf;
+}
+.input-group {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+}
+form button {
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100%;
+  font-weight: 500;
+  color: #ffafcc;
+  font-size: 1rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+form button:hover {
+  opacity: 0.8;
+}
+
+form .btn-primary {
+  background-color: #fb544e;
+  width: 50px;
+  color: #fff;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+/* .btn-secondary */
+form button:disabled {
+  background-color: #bfbfbf;
+  width: 50px;
+  color: #333;
+  border-radius: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.2rem;
+}
+form button:disabled:hover {
+  opacity: 1;
+  cursor: default;
+}
+
+ul > li {
+  margin: 0 0.5rem;
+  list-style-type: none;
+}
+
+ul li input {
+  margin: 0.5rem 0.5rem;
+}
+
+ul li input[type="radio"]::after {
+  width: 40px;
+  transition: all 0.3s ease;
+
+  height: 40px;
+  border-radius: 50%;
+  top: -6px;
+  left: -13px;
+  position: relative;
+  background-color: #ddd;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  cursor: pointer;
+}
+input[type="radio"]:checked label {
+  color: #ddd;
+}
+
+ul li input[type="radio"]:checked:after {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  top: -6px;
+  left: -13px;
+  position: relative;
+  background-color: #f87874;
+  content: "";
+  display: inline-block;
+  visibility: visible;
+  border: 2px solid white;
+  cursor: pointer;
+}
+input[type="radio"]:hover:after {
+  background-color: #f87874;
+}
+
+ul li {
+  position: relative;
+}
+
+ul li label {
+  position: absolute;
+  top: 0.9rem;
+  right: 0.5rem;
+  color: #333;
+  cursor: pointer;
+
+  font-weight: 500;
+}
+.ratingBox {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0.5rem 0;
+}
+.message {
+  margin-top: 0.5rem;
+  /* font-weight: 500; */
+  font-size: 0.8rem;
+  color: rgb(93, 93, 93);
+}
