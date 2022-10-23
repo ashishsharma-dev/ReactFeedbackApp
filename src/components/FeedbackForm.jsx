@@ -1,13 +1,25 @@
 import { FaTelegramPlane } from "react-icons/fa";
-import { useState } from "react";
+import { useState, useContext, useEffect } from "react";
 import Button from "./Button";
 import RatingSelect from "./RatingSelect";
+import FeedbackContext from "../context/FeedbackContext";
 
-const FeedbackForm = ({ handleAdd }) => {
+const FeedbackForm = () => {
   const [text, setText] = useState("");
   const [rating, setRating] = useState(10);
   const [btnDisabled, setBtnDisabled] = useState(true);
   const [msg, setMsg] = useState("");
+
+  const { addHandler, feedbackEdit, updateFeedback } =
+    useContext(FeedbackContext);
+
+  useEffect(() => {
+    if (feedbackEdit.edit) {
+      setBtnDisabled(false);
+      setText(feedbackEdit.item.text);
+      setRating(feedbackEdit.item.rating);
+    }
+  }, [feedbackEdit]);
 
   const inputHandler = (e) => {
     if (text === "") {
@@ -32,7 +44,11 @@ const FeedbackForm = ({ handleAdd }) => {
         rating,
       };
 
-      handleAdd(newFeedback);
+      if (feedbackEdit.edit) {
+        updateFeedback(feedbackEdit.item.id, newFeedback);
+      } else {
+        addHandler(newFeedback);
+      }
 
       setText("");
     }

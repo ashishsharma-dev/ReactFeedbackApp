@@ -67,7 +67,8 @@ body {
   padding: 0.5rem;
 }
 
-.card .close {
+.card .close,
+.edit {
   position: absolute;
   border: none;
   outline: none;
@@ -76,6 +77,10 @@ body {
   right: 0.8rem;
   cursor: pointer;
 }
+.edit {
+  right: 2.2rem;
+}
+
 .noFeedback {
   font-size: 1.2rem;
   font-weight: 500;
@@ -214,6 +219,7 @@ ul li input[type="radio"]:checked:after {
   border: 2px solid white;
   cursor: pointer;
 }
+
 input[type="radio"]:hover:after {
   background-color: #f87874;
 }
